@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Validation\ValidationException;
+use App\Http\Resources\UserLogged;
 
-class authController extends Controller
+class AuthController extends Controller
 {
     public function login(Request $request) {
         $request->validate([
@@ -13,13 +16,13 @@ class authController extends Controller
         ]);
 
         $user = User::where('email', $request->email)->first();
-
-        if (! $user || ! Hash::check($request->password, $user->password)) {
+        if (!$user || sha1($request->password) != $user->password ) {
             throw ValidationException::withMessages([
                 'email' => ['The provided credentials are incorrect.'],
             ]);
         }
+        \Log::info(json_encode(new UserLogged($user)));
 
-        return $user->createToken($request->device_name)->plainTextToken;
+        return new UserLogged($user);
     }
 }

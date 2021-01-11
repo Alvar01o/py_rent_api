@@ -1,7 +1,7 @@
 <?php
 
 namespace Tests\Feature;
-
+use Illuminate\Support\Facades\Log;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -18,4 +18,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testLogin()
+    {
+        $response = $this->postJson('/api/login', ['email' => 'frank67@example.com','password'=>'password']);
+        $response->assertStatus(200);
+    }
+
 }

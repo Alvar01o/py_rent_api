@@ -34,6 +34,6 @@ class CreateCustomer extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('custoemrs');
+        Schema::dropIfExists('customers');
     }
 }
