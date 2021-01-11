@@ -16,7 +16,7 @@ class CreateRealStateTable extends Migration
         Schema::create('real_state', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('active',['yes' , 'no']);
+            $table->enum('active',['yes' , 'no'])->default('yes');
             $table->timestamps();
         });
     }

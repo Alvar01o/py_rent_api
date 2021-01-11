@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+use App\Models\RealState;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia;
@@ -44,4 +46,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function realStates()
+    {
+        return $this->hasMany(RealState::class);
+    }
+
 }

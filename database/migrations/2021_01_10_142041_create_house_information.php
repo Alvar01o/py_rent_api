@@ -17,8 +17,10 @@ class CreateHouseInformation extends Migration
             $table->id();
             $table->point('coordinate');
             $table->string('description');
-            $table->enum('status',['disponible' , 'reservado', 'ocupado']);
+            $table->enum('status',['disponible' , 'reservado', 'ocupado'])->default('disponible');
             $table->float('price');
+            $table->string('currency');
+            $table->enum('period',['day' , 'week', 'month', 'year'])->default('month');
             $table->timestamps();
         });
     }
