@@ -21,7 +21,7 @@ class ExampleTest extends TestCase
 
     public function testLogin()
     {
-        $response = $this->postJson('/api/login', ['email' => 'frank67@example.com','password'=>'password']);
+        $response = $this->postJson('/api/login', ['email' => 'test@example.com','password'=>'password']);
         $response->assertStatus(200);
     }
 

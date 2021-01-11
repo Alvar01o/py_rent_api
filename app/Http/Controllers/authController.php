@@ -9,6 +9,7 @@ use App\Http\Resources\UserLogged;
 
 class AuthController extends Controller
 {
+
     public function login(Request $request) {
         $request->validate([
             'email' => 'required|email',
@@ -16,13 +17,15 @@ class AuthController extends Controller
         ]);
 
         $user = User::where('email', $request->email)->first();
+
         if (!$user || sha1($request->password) != $user->password ) {
             throw ValidationException::withMessages([
                 'email' => ['The provided credentials are incorrect.'],
             ]);
         }
-        \Log::info(json_encode(new UserLogged($user)));
 
+        \Log::info(json_encode(new UserLogged($user)));
         return new UserLogged($user);
     }
+
 }
