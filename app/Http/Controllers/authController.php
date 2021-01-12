@@ -23,9 +23,11 @@ class AuthController extends Controller
                 'email' => ['The provided credentials are incorrect.'],
             ]);
         }
-
-        \Log::info(json_encode(new UserLogged($user)));
         return new UserLogged($user);
     }
 
+    public function logout(Request $request){
+        $request->user()->currentAccessToken()->delete();
+        return ['ok'];
+    }
 }
