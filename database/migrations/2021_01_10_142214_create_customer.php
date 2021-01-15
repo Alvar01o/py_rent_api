@@ -18,8 +18,8 @@ class CreateCustomer extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->string('phone');
-            $table->string('country');
-            $table->string('avatar');
+            $table->string('country')->nullable()->defaul(NULL);
+            $table->string('avatar')->nullable();
             $table->enum('active',['yes' , 'no'])->default('yes');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

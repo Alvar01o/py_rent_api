@@ -27,7 +27,18 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
-        $request->user()->currentAccessToken()->delete();
-        return ['ok'];
+
+        if(!empty($request->user())) {
+            $request->user()->currentAccessToken()->delete();
+        }
+
+        return response(['message' => 'Logout successfully'], 200)
+            ->header('Content-Type', 'text/plain');
+
     }
+
+    public function AuthError(Request $request) {
+        return ['message'=>'Check Documentation. You should not be here.'];
+    }
+
 }

@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('phone');
             $table->string('address');
-            $table->string('country');
+            $table->string('country')->nullable()->default('NULL');
             $table->enum('verified',['yes' , 'no'])->default('no');
             $table->enum('active',['yes' , 'no'])->default('yes');
             $table->string('email')->unique();
