@@ -15,7 +15,7 @@ use App\Http\Controllers\RealStateController;
 |
 */
 
-Route::post('/login' , [AuthController::class, 'login']);
+
 
 Route::middleware('auth:api')->group( function () {
     Route::get('/real_states' , [RealStateController::class, 'index']);
