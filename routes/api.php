@@ -17,7 +17,7 @@ use App\Http\Controllers\RealStateController;
 
 
 
-Route::middleware('auth:api')->group( function () {
+Route::middleware('auth:sanctum')->group( function () {
     Route::get('/real_states' , [RealStateController::class, 'index']);
     Route::get('/logout' , [AuthController::class, 'logout']);
 });

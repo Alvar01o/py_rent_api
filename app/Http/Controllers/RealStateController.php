@@ -17,6 +17,7 @@ class RealStateController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
+        print_r(auth()->user());die;
         $realStates = RealState::where('user_id', '=' , $user->id)->get();
         return new RealStateCollections($realStates);
     }

@@ -22,7 +22,7 @@ class UserLogged extends JsonResource
             'last_name' => $this->last_name,
             'email'     => $this->email,
             'active'    => $this->active,
-            'token'     => $user->createToken($this->id)->plainTextToken,
+            'token'     => $this->token,
         ];
     }
 }
