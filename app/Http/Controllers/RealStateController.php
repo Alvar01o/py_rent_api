@@ -17,9 +17,8 @@ class RealStateController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        print_r(auth()->user());die;
-        $realStates = RealState::where('user_id', '=' , $user->id)->get();
-        return new RealStateCollections($realStates);
+        $realStates = RealState::where('user_id', '=' , $user->id)->paginate();
+        return $realStates;
     }
 
 
@@ -40,9 +39,11 @@ class RealStateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        $user = $request->user();
+        $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
+        return $realState;
     }
 
     /**
@@ -63,8 +64,17 @@ class RealStateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        $user = $request->user();
+        $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->delete();
+
+        return ($realState) ? [
+            'error'=> false,
+            'message'=>'Propiedad Eliminada'
+        ] : [
+            'error'=> true,
+            'message'=>'Error al eliminar propiedad'
+        ];
     }
 }

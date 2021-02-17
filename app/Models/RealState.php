@@ -12,6 +12,7 @@ use App\Models\RealStateType;
 
 class RealState extends Model
 {
+    protected  $table = 'real_state';
     use HasFactory, InteractsWithMedia;
 
     public function houses()
