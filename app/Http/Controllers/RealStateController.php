@@ -41,8 +41,11 @@ class RealStateController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $user = $request->user();
+        $user = $request->user(); //trae el usuario logeado
+
+        //busca las propiedades de ese usuario
         $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
+
         return $realState;
     }
 
@@ -55,7 +58,13 @@ class RealStateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = $request->user();
+        //busca las propiedades del usuario logeado que cohincidan con el id enviado
+        $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
+
+        //1.traer los datos enviados en la peticion
+        //2.actualizar $realState y guardar
+        //3.devolver la propiedad con datos actualizados
     }
 
     /**
@@ -67,14 +76,15 @@ class RealStateController extends Controller
     public function destroy(Request $request,$id)
     {
         $user = $request->user();
+        //busca las propiedades del usuario logeado que cohincidan con el id enviado
         $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->delete();
 
-        return ($realState) ? [
+        return ($realState) ? [ // si se encontro se elimina
             'error'=> false,
             'message'=>'Propiedad Eliminada'
-        ] : [
-            'error'=> true,
-            'message'=>'Error al eliminar propiedad'
+        ] : [ //si no muestra un mensaje de error pero el error sigue como falso.
+            'error'=> false,
+            'message'=>'No se encontro la propiedad'
         ];
     }
 }
