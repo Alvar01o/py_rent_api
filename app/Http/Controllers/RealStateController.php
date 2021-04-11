@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RealState;
 use App\Models\RealStateCollections;
-
+use Illuminate\Support\Facades\Validator;
 
 class RealStateController extends Controller
 {
@@ -30,7 +30,25 @@ class RealStateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = $request->user(); //traer usuario logeado
+        $newRow = [ // preparar datos para insertar en db
+            'user_id'=>$user->id,
+            'name' => $request->get('name')
+        ];
+
+        $validator = Validator::make($newRow , [ //validar los datos creados arriba
+            'name' => 'required',
+            'user_id' => 'required',
+        ]);
+
+        if ($validator->fails()) { //si la validacion falla mostrar los errores
+            return  $validator->errors();
+        } else { //si no hubo error de validacion guardar los datos y retornar la fila guardada
+           $nuevaFilaEnDB =  new RealState($newRow);
+           $nuevaFilaEnDB->save();
+           return $nuevaFilaEnDB;
+        }
+
     }
 
     /**
@@ -42,7 +60,6 @@ class RealStateController extends Controller
     public function show(Request $request, $id)
     {
         $user = $request->user(); //trae el usuario logeado
-
         //busca las propiedades de ese usuario
         $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
 

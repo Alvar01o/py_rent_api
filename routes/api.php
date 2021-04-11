@@ -18,6 +18,7 @@ use App\Http\Controllers\RealStateController;
 
 
 Route::middleware('auth:sanctum')->group( function () {
+    Route::post('/real_states' , [RealStateController::class, 'store']);
     Route::delete('/real_states/{id}' , [RealStateController::class, 'destroy']);
     Route::get('/real_states/{id}' , [RealStateController::class, 'show']);
     Route::get('/real_states' , [RealStateController::class, 'index']);

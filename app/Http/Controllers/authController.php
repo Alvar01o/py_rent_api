@@ -25,7 +25,6 @@ class AuthController extends Controller
         }
 
         $user = User::where('email', $request->email)->first(); //sino guarda el usuario en esta variable
-
         if (empty($user) || !Hash::check($request->password, $user->password)) { //si no se encontro el usuario o si no cohinciden la contrasena enviada con la que esta en la base de datos muestra un error
             return [
                 'email' => ['The provided credentials are incorrect.'],

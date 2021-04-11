@@ -14,6 +14,11 @@ class RealState extends Model
 {
     protected  $table = 'real_state';
     use HasFactory, InteractsWithMedia;
+    protected $fillable = [
+        'name',
+        'user_id',
+        'active',
+    ];
 
     public function houses()
     {
