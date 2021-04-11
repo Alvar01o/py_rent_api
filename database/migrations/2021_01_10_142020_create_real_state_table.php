@@ -16,6 +16,7 @@ class CreateRealStateTable extends Migration
         Schema::create('real_state', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->enum('type' , ['casa' , 'duplex' , 'departamento', 'departamentos' , 'pensionado' , 'pensionado estudiantil'])->default('casa');
             $table->string('name');
             $table->enum('active',['yes' , 'no'])->default('yes');
             $table->timestamps();

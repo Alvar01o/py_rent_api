@@ -15,11 +15,12 @@ class CreateHouseInformation extends Migration
     {
         Schema::create('house_information', function (Blueprint $table) {
             $table->id();
-            $table->point('coordinate');
-            $table->string('description');
+            $table->point('coordinate')->nullable();
+            $table->integer('real_state_id');
+            $table->string('description')->nullable();
             $table->enum('status',['disponible' , 'reservado', 'ocupado'])->default('disponible');
             $table->float('price');
-            $table->string('currency');
+            $table->string('currency')->default('PYG');
             $table->enum('period',['day' , 'week', 'month', 'year'])->default('month');
             $table->timestamps();
         });
