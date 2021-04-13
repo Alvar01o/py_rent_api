@@ -24,4 +24,5 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/real_states/{id}' , [RealStateController::class, 'show']);
     Route::get('/real_states' , [RealStateController::class, 'index']);
     Route::get('/logout' , [AuthController::class, 'logout']);
+    Route::post('/UsersController' , [UsersController::class, 'store']);
 });
