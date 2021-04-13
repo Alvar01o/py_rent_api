@@ -18,6 +18,15 @@ use App\Http\Controllers\RealStateController;
 
 
 Route::middleware('auth:sanctum')->group( function () {
+
+    /**House Information Routes */
+        // agregar rutas para house information aqui
+//    Route::post('/house' , [HouseController::class, 'store']);
+//    Route::delete('/house/{id}' , [HouseController::class, 'destroy']);
+//    Route::get('/house/{id}' , [HouseController::class, 'show']);
+//    Route::get('/house' , [HouseController::class, 'index']);
+
+/**Real State Routes */
     Route::post('/real_states' , [RealStateController::class, 'store']);
     Route::put('/real_states/{id}' , [RealStateController::class, 'update']);
     Route::delete('/real_states/{id}' , [RealStateController::class, 'destroy']);
@@ -25,4 +34,6 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/real_states' , [RealStateController::class, 'index']);
     Route::get('/logout' , [AuthController::class, 'logout']);
     Route::post('/UsersController' , [UsersController::class, 'store']);
+    /**House Details Routes */
+        // agregar rutas para house details aqui
 });

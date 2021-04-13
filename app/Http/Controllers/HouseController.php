@@ -13,7 +13,9 @@ class HouseController extends Controller
      */
     public function index()
     {
-        //
+        $user = $request->user();
+        $realStates = RealState::where('user_id', '=' , $user->id)->paginate();
+        return $realStates;
     }
 
     /**
@@ -34,7 +36,12 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //1. traer usuario logeado
+        //2. preparar datos para insertar en db
+        //2.1 -real_state_id, description, status, price
+        //3. validar los datos
+        //4. si la validacion falla mostrar los errores
+        //5. si no hubo error de validacion guardar los datos y retornar la fila guardada
     }
 
     /**
