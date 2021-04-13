@@ -12,8 +12,9 @@ use App\Models\RealStateType;
 
 class RealState extends Model
 {
-    protected  $table = 'real_state';
     use HasFactory, InteractsWithMedia;
+
+    protected  $table = 'real_state';
     protected $fillable = [
         'name',
         'user_id',
