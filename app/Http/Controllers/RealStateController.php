@@ -62,7 +62,12 @@ class RealStateController extends Controller
         $user = $request->user(); //trae el usuario logeado
         //busca las propiedades de ese usuario
         $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
-
+        if(is_null($realState)){
+            return [ //si no muestra un mensaje de error pero el error sigue como falso.
+                'error'=> true,
+                'message'=>'No se encontro la propiedad'
+            ];
+        }
         return $realState;
     }
 
@@ -76,12 +81,33 @@ class RealStateController extends Controller
     public function update(Request $request, $id)
     {
         $user = $request->user();
+        $newRow = [ // preparar datos para insertar en db
+            'name' => $request->get('name')
+        ];
         //busca las propiedades del usuario logeado que cohincidan con el id enviado
         $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$id)->first();
+        $validator = Validator::make($newRow , [ //validar los datos creados arriba
+            'name' => 'required|alpha_dash|max:255'
+        ]);
+        if ($validator->fails()) { //si la validacion falla mostrar los errores
+            return  $validator->errors();
+        }
 
+        if(is_null($realState)){
+            return [ //si no muestra un mensaje de error pero el error sigue como falso.
+                'error'=> true,
+                'message'=>'Inválido, imposible continuar'
+            ];
+        }
         //1.traer los datos enviados en la peticion
+        
         //2.actualizar $realState y guardar
+        //var_dump($realState->toArray());
+        $realState->name=$request->get('name');
+        //var_dump($realState->toArray()); die;
         //3.devolver la propiedad con datos actualizados
+        $realState->save();
+        return $realState;
     }
 
     /**
