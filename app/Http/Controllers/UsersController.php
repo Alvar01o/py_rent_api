@@ -27,26 +27,7 @@ class UsersController extends Controller
     public function store(Request $request)
     {
 
-            $user = $request->user(); //traer usuario logeado
-            $newRow = [ // preparar datos para insertar en db
-                'user_id'=>$real_state_id->id,
-                'status' => $request->get('status'),
-                'description' => $request->get('description'),
-                'price' => $request->get('price'),
-            ];
-    
-            $validator = Validator::make($newRow , [ //validar los datos creados arriba
-                'name' => 'required|unique:posts|max:255',
-                'user_id' => 'required',
-            ]);
-    
-            if ($validator->fails()) { //si la validacion falla mostrar los errores
-                return  $validator->errors()->add('field', 'Algo salió mal');
-            } else { //si no hubo error de validacion guardar los datos y retornar la fila guardada
-               $nuevaFilaEnDB =  new RealState($newRow);
-               $nuevaFilaEnDB->save();
-               return $nuevaFilaEnDB;
-            }
+         
    }
 
     /**

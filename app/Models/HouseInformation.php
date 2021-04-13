@@ -16,7 +16,9 @@ class HouseInformation extends Model
         'real_state_id',
         'description',
         'status',
-        'price'
+        'price',
+        'user_id',
+
     ];
 
     public function user()
