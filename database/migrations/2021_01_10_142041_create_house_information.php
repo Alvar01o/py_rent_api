@@ -16,6 +16,7 @@ class CreateHouseInformation extends Migration
         Schema::create('house_information', function (Blueprint $table) {
             $table->id();
             $table->point('coordinate')->nullable();
+            $table->integer('user_id');
             $table->integer('real_state_id');
             $table->string('description')->nullable();
             $table->enum('status',['disponible' , 'reservado', 'ocupado'])->default('disponible');
