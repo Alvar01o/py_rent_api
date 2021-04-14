@@ -24,7 +24,7 @@ class HouseDetailsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 'house_information_id','rooms','kitchen','bathrooms'
     }
 
     /**

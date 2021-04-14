@@ -16,7 +16,8 @@ class HouseDetails extends Model
         'house_information_id',
         'rooms',
         'kitchen',
-        'bathrooms'
+        'bathrooms',
+        'user_id'
     ];
 
     public function House()

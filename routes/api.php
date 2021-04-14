@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RealStateController;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\HouseInformation;
+use App\Http\Controllers\HouseDetailsController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,7 +25,7 @@ Route::middleware('auth:sanctum')->group( function () {
 
     /**House Information Routes */
         // agregar rutas para house information aqui
-  Route::post('/house' , [HouseController::class, 'store']);
+    Route::post('/house' , [HouseController::class, 'store']);
     Route::delete('/house/{id}' , [HouseController::class, 'destroy']);
     Route::get('/house/{id}' , [HouseController::class, 'show']);
     Route::get('/house' , [HouseController::class, 'index']);
@@ -37,5 +39,11 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/real_states' , [RealStateController::class, 'index']);
     Route::get('/logout' , [AuthController::class, 'logout']);
     /**House Details Routes */
-        // agregar rutas para house details aqui
+
+    Route::post('/house_details' , [HouseDetailsController::class, 'store']);
+    Route::delete('/house_details/{id}' , [HouseDetailsController::class, 'destroy']);
+    Route::get('/house_details/{id}' , [HouseDetailsController::class, 'show']);
+    Route::get('/house_details' , [HouseDetailsController::class, 'index']);
+    Route::put('/house_details/{id}' , [HouseDetailsController::class, 'update']);
+
 });
