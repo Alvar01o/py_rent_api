@@ -15,6 +15,7 @@ class CreateHouseDetail extends Migration
     {
         Schema::create('house_details', function (Blueprint $table) {
             $table->id();
+            $table->integer('house_information_id');
             $table->integer('rooms');
             $table->integer('kitchen');
             $table->integer('bathrooms');

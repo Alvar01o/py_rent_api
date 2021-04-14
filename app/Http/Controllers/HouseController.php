@@ -20,16 +20,6 @@ class HouseController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -37,12 +27,6 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        //1. traer usuario logeado
-        //2. preparar datos para insertar en db
-        //2.1 -real_state_id, description, status, price
-        //3. validar los datos
-        //4. si la validacion falla mostrar los errores
-        //5. si no hubo error de validacion guardar los datos y retornar la fila guardada
         $user = $request->user(); //traer usuario logeado
         $newRow = [ // preparar datos para insertar en db
             'user_id'=>$user->id,
@@ -68,7 +52,7 @@ class HouseController extends Controller
            $nuevaFilaEnDB->save();
            return $nuevaFilaEnDB;
         }
-   
+
     }
 
     /**
@@ -89,17 +73,6 @@ class HouseController extends Controller
             ];
         }
         return $house;
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
@@ -138,7 +111,7 @@ class HouseController extends Controller
                 'message'=>'Inválido, imposible continuar'
             ];
         }
-       
+
         $house->update($newRow);
         return $house;
     }
@@ -154,7 +127,7 @@ class HouseController extends Controller
             $user = $request->user();
             //busca las propiedades del usuario logeado que cohincidan con el id enviado
             $house = HouseInformation::where('user_id', '=' , $user->id)->where('id','=',$id)->delete();
-    
+
             return ($house) ? [ // si se encontro se elimina
                 'error'=> false,
                 'message'=>'Propiedad Eliminada'
