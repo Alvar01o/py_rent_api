@@ -43,10 +43,18 @@ class HouseController extends Controller
             'price'=>'required',
             'real_state_id'=> 'required',
 
-        ]);
-
+        ]
+       
+    );
+    $realState = RealState::where('user_id', '=' , $user->id)->where('id','=',$request->get('real_state_id'))->first();
+        if(is_null($realState)){
+        return [ //si no muestra un mensaje de error pero el error sigue como falso.
+            'error'=> true,
+            'message'=>'No se encontro la propiedad'
+        ];
+    }
         if ($validator->fails()) { //si la validacion falla mostrar los errores
-            return  $validator->errors()->add('field', 'Algo salió mal');
+            return  $validator->errors();
         } else { //si no hubo error de validacion guardar los datos y retornar la fila guardada
            $nuevaFilaEnDB =  new HouseInformation($newRow);
            $nuevaFilaEnDB->save();
