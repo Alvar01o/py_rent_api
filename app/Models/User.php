@@ -14,6 +14,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 use App\Models\RealState;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia;

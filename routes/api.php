@@ -7,7 +7,7 @@ use App\Http\Controllers\RealStateController;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\HouseInformation;
 use App\Http\Controllers\HouseDetailsController;
-
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -45,5 +45,8 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/house_details/{id}' , [HouseDetailsController::class, 'show']);
     Route::get('/house_details' , [HouseDetailsController::class, 'index']);
     Route::put('/house_details/{id}' , [HouseDetailsController::class, 'update']);
-
+    
+    //users controller routes
+    Route::get('/user/{id}' , [UsersController::class, 'show']);
+    Route::get('/user' , [UsersController::class, 'index']);
 });
