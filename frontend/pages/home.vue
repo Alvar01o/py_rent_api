@@ -1,43 +1,75 @@
 <template>
 <div>
-    <div class="border row">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li v-for="(valor, index) in opciones" :key="index" class="nav-item">
-                    <a href="#" class="nav-link">{{valor}}</a>
-                </li>
-            </ul>
-            </div>
+  <nav class="navbar navbar-expand-lg letra">
+    <div class="container">
+      <div class="row col-md-12 ">
+        <a class="navbar-brand col-md-3 float-left" href=""> <img src="logo.png" class="logo-brand" alt="logo"></a>
+        <div class="collapse navbar-collapse col-md-8" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="home">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="contacto">Contactanos</a>
+            </li>
+          </ul>
         </div>
-        </nav>
+      </div>
     </div>
+  </nav>
+  
+  <section id="hero" class='hero'>
+      <div class="container">
+    
+      </div>
 
-</div>
-</template>
+
+  </section>
+  </div>
+  </template>
+  
+  
+
 
 <script>
 export default {
-    layout: null,
-    data(){
-        return {
-            opciones: [
-                'Opcion1',
-                'Opcion2',
-                'Opcion3',
-                'Opcion4',
-                'Opcion5',
-            ]
-        }
+  layout: null,
+  data() {
+    return {
+      opciones: ['Opcion1', 'Opcion2', 'Opcion3', 'Opcion4', 'Opcion5'],
     }
+  },
 }
 </script>
 
 <style>
-
+.letra {
+  font-family: 'Titillium Web', sans-serif;
+}
+.navbar{
+    background-color: #ffff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+    min-height: 55px;
+}
+.nav-link{
+    color: #1a1a1a;
+}
+.nav-link:hover{
+    color:#1a1a1a;
+    font-weight: 700;
+}
+.logo-brand{
+    min-width: 50px;
+    max-width: 55px;
+}
+.hero{
+    background-image: url('/hero.jpg');
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 1000px;
+    color: #ffff;
+}
 </style>

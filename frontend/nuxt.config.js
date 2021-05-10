@@ -9,7 +9,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'StyleSheet', type: 'text/css', href: '/css/bootstrap.min.css' }
+      { rel: 'StyleSheet', type: 'text/css', href: '/css/bootstrap.min.css' },
+      { rel:'Stylesheet',
+        href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
+      }
     ]
   },
 
