@@ -13,8 +13,15 @@ export default {
       { rel:'Stylesheet',
         href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
       }
+    ],
+    script:[
+      {
+        src:"https://unpkg.com/ionicons@5.4.0/dist/ionicons.js",
+        body: true,
+      }
     ]
   },
+
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
