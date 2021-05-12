@@ -75,7 +75,11 @@
                   </p>
                 </a>
               </div>
-              <img src="portfolio1.jpg" class="rounded mx-auto d-block" alt="portfolio1" />
+              <img
+                src="portfolio1.jpg"
+                class="rounded mx-auto d-block"
+                alt="portfolio1"
+              />
             </div>
           </div>
           <div class="col-md-6 letra">
@@ -90,7 +94,11 @@
                   </p>
                 </a>
               </div>
-              <img src="portfolio2.jpeg" class="rounded mx-auto d-block" alt="portfolio2" />
+              <img
+                src="portfolio2.jpeg"
+                class="rounded mx-auto d-block"
+                alt="portfolio2"
+              />
             </div>
           </div>
           <div class="col-md-6 letra">
@@ -105,7 +113,11 @@
                   </p>
                 </a>
               </div>
-              <img src="portfolio3.jpg" class="rounded mx-auto d-block" alt="portfolio3" />
+              <img
+                src="portfolio3.jpg"
+                class="rounded mx-auto d-block"
+                alt="portfolio3"
+              />
             </div>
           </div>
           <div class="col-md-6 letra">
@@ -120,7 +132,11 @@
                   </p>
                 </a>
               </div>
-              <img src="portfolio4.jpg" class="rounded mx-auto d-block" alt="portfolio4" />
+              <img
+                src="portfolio4.jpg"
+                class="rounded mx-auto d-block"
+                alt="portfolio4"
+              />
             </div>
           </div>
         </div>
@@ -131,16 +147,7 @@
       <a href="#"> Dejanos cumplir tu sueño</a>
     </div>
     <section id="aboutus" class="bg-light-gray">
-      <div class="container">
-      <div class="content-center">
-          <h2>Morbi in sem quis dui placerat ornare.</h2>
-          <p>
-            Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-            luctus metus libero eu augue. Morbi purus libero, faucibus
-            adipiscing, commodo quis, gravida id, est. Sed lectus
-          </p>
-        </div>
-        <div class="container letra">
+      <div class="container letra content center">
         <div class="row">
           <div class="col-sm-6">
             <div class="container-text">
@@ -148,19 +155,52 @@
                 <h5>Ubicados en el corazon de Encarnacion</h5>
                 <span>Direccion</span>
               </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221.51322193338805!2d-55.860127635779705!3d-27.33785395347265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94579559a9303a9f%3A0x103db4df9cfdc97d!2sTodo%20Pez!5e0!3m2!1ses!2spy!4v1620782225122!5m2!1ses!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221.51322193338805!2d-55.860127635779705!3d-27.33785395347265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94579559a9303a9f%3A0x103db4df9cfdc97d!2sTodo%20Pez!5e0!3m2!1ses!2spy!4v1620782225122!5m2!1ses!2spy"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
           <div class="col-sm-6">
-                <h2>Historia </h2>
-          <p>
-            chiquitita dime porque
-          </p>
+            <h2>Historia</h2>
+            <p class="titulo-footer">chiquitita dime porque</p>
           </div>
         </div>
       </div>
-      </div>
     </section>
+    <footer id="footer" class="letra">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="titulo-footer">SUBSCRIBE TO OUR NEWSLETTER</h3>
+            <p class="titulo-footer">
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
+            </p>
+            <p id="pie-footer">© 2021 Zolutio, Inc. All rights reserved.</p>
+          </div>
+            <div class="col-md-6 pt-2">
+              <form class="form-inline col-md-12">
+                <div class="form-group col-md-8 float-left">
+                  <input
+                    type="email"
+                    class="form-control mb-2 mr-sm-2 "
+                    id="inlineFormInputName2"
+                    placeholder="Escribe tu email"
+                  />  
+                </div>                
+                <button type="submit" class="btn btn-primary mb-2 col-md-2 float-right">
+                  Submit
+                </button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
   
@@ -179,19 +219,21 @@ export default {
 </script>
 
 <style>
- .container-text{
-   position:relative;
-   margin: 10px 0;
-   
-
- }
- .container-details{
-   position:absolute;
-   color:#1a1a1a;
-   bottom:0px;
-   right: 150px;
-   font-weight: bold;
- }
+.container-text {
+  position: relative;
+  margin: 10px 0;
+}
+.container-details {
+  position: absolute;
+  color: #1a1a1a;
+  bottom: 0px;
+  right: 150px;
+  font-weight: bold;
+  background-color: gray;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
 
 .letra {
   font-family: 'Titillium Web', sans-serif;
@@ -298,19 +340,33 @@ section {
 .portfolio-details h2 {
   margin-bottom: 0px;
 }
-@media (max-width: 575.98px) {
-  h1 {
-    font-size: 40px;
-    line-height: normal;
-  }
-  .text-dark {
-    color: #1a1a1a1a;
-  }
-  .bg-light-gray{
-    background-color:#9b9b9b !important;
-
-  }
+h1 {
+  font-size: 40px;
+  line-height: normal;
 }
+.text-dark {
+  color: #1a1a1a1a;
+}
+.bg-light-gray {
+  background-color: #9b9b9b;
+}
+#footer {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: auto;
+}
+#pie-footer {
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+}
+.titulo-footer {
+  color: #ffff;
+  text-align: center;
+  padding-top: 1rem;
+  position: relative;
+}
+
 /*@media (min-width: 768px) and (max-width: 991.98px) { ... }
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
