@@ -1,5 +1,3 @@
-const webpack = require("webpack");
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,8 +9,21 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:'Stylesheet',
+        href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
+      }
+    ],
+    script:[
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' },
+      { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js' },
+      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' },
+      {
+        src:"https://unpkg.com/ionicons@5.4.0/dist/ionicons.js",
+        body: true,
+      }
     ]
   },
+
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -54,11 +65,7 @@ export default {
     /**
       * add external plugins
       */
-    vendor: ["jquery", "bootstrap"],
     plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery"
-      })
     ],
     /*
     ** Run ESLint on save
