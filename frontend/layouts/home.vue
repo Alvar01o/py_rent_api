@@ -1,12 +1,8 @@
 <template>
   <div>
-    <Hero />
-    <Portfolio />
-    <div class="text-center topmargin-xs text-dark letra">
-      <p>El hogar con el que siempre soñaste se puede hacer realidad ahora</p>
-      <a href="#"> Dejanos cumplir tu sueño</a>
-    </div>
-    <AboutUs />
+    <NavBar />
+      <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -14,20 +10,16 @@
 
 
 <script>
-import Hero from '/components/HomeComponents/Hero'
-import Portfolio from '/components/HomeComponents/Portfolio'
-import AboutUs from '/components/HomeComponents/AboutUs'
-
+import NavBar from '/components/HomeComponents/NavBar'
+import Footer from '/components/HomeComponents/Footer'
 export default {
-  layout: 'home',
+  layout: null,
   components: {
-    Hero,
-    AboutUs,
-    Portfolio
+    NavBar,
+    Footer
   },
   data() {
     return {
-      opciones: ['Opcion1', 'Opcion2', 'Opcion3', 'Opcion4', 'Opcion5'],
     }
   },
 }
@@ -86,18 +78,7 @@ section {
   margin-top: 15px;
 }
 
-.navbar {
-  background-color: #ffff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  min-height: 55px;
-}
-.nav-link {
-  color: #1a1a1a;
-}
-.nav-link:hover {
-  color: #1a1a1a;
-  font-weight: 700;
-}
+
 .logo-brand {
   min-width: 50px;
   max-width: 55px;
@@ -165,22 +146,7 @@ h1 {
 .bg-light-gray {
   background-color: #9b9b9b;
 }
-#footer {
-  background-color: #1a1a1a;
-  width: 100%;
-  height: auto;
-}
-#pie-footer {
-  width: 100%;
-  height: auto;
-  padding-top: 4rem;
-}
-.titulo-footer {
-  color: #ffff;
-  text-align: center;
-  padding-top: 1rem;
-  position: relative;
-}
+
 
 /*@media (min-width: 768px) and (max-width: 991.98px) { ... }
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
