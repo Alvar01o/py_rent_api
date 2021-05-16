@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -9,17 +11,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'StyleSheet', type: 'text/css', href: '/css/bootstrap.min.css' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~/node_modules/bootstrap/dist/css/bootstrap.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ["~plugins/bootstrap.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -50,5 +51,27 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    /**
+      * add external plugins
+      */
+    vendor: ["jquery", "bootstrap"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery"
+      })
+    ],
+    /*
+    ** Run ESLint on save
+    */
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/
+        });
+      }
+    }
   }
 }
