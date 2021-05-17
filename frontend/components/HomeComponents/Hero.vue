@@ -1,23 +1,19 @@
 <template>
-      <section id="hero" class="hero">
-      <div class="container">
-        <div class="content-center topmargin-lg letra">
+      <section id="hero" class="d-flex flex-column justify-content-center align-items-center hero letra">
+      <div class="container container text-center text-md-left" data-aos="fade-up">
           <h1>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-            odio. Quisque volutpat mattis eros.
+            Bienvenido a ARMV propiedades
           </h1>
-          <p>
-            Praesent dapibus, neque id cursus faucibus, tortor neque egestas
-            auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
-            dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-          </p>
-          <a href="#" class="btn btn-light topmargin-sm"
-            >QUIERO ALQUILAR<ion-icon
+          <h2>
+            Somos una empresa seria y responsable uwu
+          </h2>
+          <a href="#" class="btn-quiero-alquilar scrollto">
+            QUIERO ALQUILAR<ion-icon
               name="arrow-forward-circle-outline"
             ></ion-icon
           ></a>
         </div>
-      </div>
+      
     </section>
 </template>
 <script>

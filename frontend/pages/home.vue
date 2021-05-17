@@ -2,10 +2,8 @@
   <div>
     <Hero />
     <Portfolio />
-    <div class="text-center topmargin-xs text-dark letra">
-      <p>El hogar con el que siempre soñaste se puede hacer realidad ahora</p>
-      <a href="#"> Dejanos cumplir tu sueño</a>
-    </div>
+    <Portfolio2 />
+  
     <AboutUs />
   </div>
 </template>
@@ -16,6 +14,7 @@
 <script>
 import Hero from '/components/HomeComponents/Hero'
 import Portfolio from '/components/HomeComponents/Portfolio'
+import Portfolio2 from '/components/HomeComponents/Portfolio2'
 import AboutUs from '/components/HomeComponents/AboutUs'
 
 export default {
@@ -23,7 +22,8 @@ export default {
   components: {
     Hero,
     AboutUs,
-    Portfolio
+    Portfolio,
+    Portfolio2
   },
   data() {
     return {
@@ -76,6 +76,12 @@ section {
 #hero p {
   color: #ffff;
 }
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
 .topmargin-lg {
   margin-top: 60px;
 }
@@ -85,9 +91,14 @@ section {
 .topmargin-xs {
   margin-top: 15px;
 }
+ion-icon {
+  font-size: 30px;
+  margin-inline: 12px;
+  margin-top: 20 px;
+}
 
 .navbar {
-  background-color: #ffff;
+  background-color: rgb(15, 12, 12);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   min-height: 55px;
 }
@@ -103,29 +114,69 @@ section {
   max-width: 55px;
 }
 .hero {
-  background-image: url('/hero.jpg');
+  background-image: url('/hero.jpg') center center;
+  height: calc(100vh - 70px);
   background-size: cover;
-  padding-top: 90px;
-  min-height: 1000px;
-  color: #ffff;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  
 }
+#hero:before {
+  content: "";
+  background: rgba(29, 6, 6, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .content-center {
   max-width: 800px;
   margin: 0 auto 60px auto;
   text-align: center;
 }
-.btn {
-  font-size: 14px;
-  padding: 15px 26px;
-  min-width: 160px;
-  border-radius: 2px;
-  display: inline-block;
+
+#hero .btn-quiero-alquilar {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
 }
-.btn-light {
-  background-color: #ffff;
-  color: #1a1a1a;
-  border: 2px solid #ffff;
+#hero .btn-quiero-alquilar:hover {
+  border-color: #0647a8;
+  background: #064fbd;
 }
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #hero {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
 .portfolio-container {
   position: relative;
   overflow: hidden;
@@ -155,10 +206,7 @@ section {
 .portfolio-details h2 {
   margin-bottom: 0px;
 }
-h1 {
-  font-size: 40px;
-  line-height: normal;
-}
+
 .text-dark {
   color: #1a1a1a1a;
 }

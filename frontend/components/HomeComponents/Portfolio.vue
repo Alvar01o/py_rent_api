@@ -1,98 +1,28 @@
 <template>
-      <section id="portafolio">
+  <section id="portafolio">
       <div class="container fluid letra">
-        <div class="content-center">
-          <h2>Morbi in sem quis dui placerat ornare.</h2>
-          <p>
-            Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-            luctus metus libero eu augue. Morbi purus libero, faucibus
-            adipiscing, commodo quis, gravida id, est. Sed lectus
-          </p>
-        </div>
         <div class="row">
-          <div class="col-md-6 letra">
-            <div class="portfolio-container">
-              <div class="portfolio-details">
-                <a href="#">
-                  <h2>Phasellus ultrices nulla</h2>
-                </a>
-                <a href="#">
-                  <p>
-                    Donec consectetuer ligula vulputate sem tristique cursus.
-                  </p>
-                </a>
-              </div>
-              <img
-                src="portfolio1.jpg"
-                class="rounded mx-auto d-block"
-                alt="portfolio1"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 letra">
-            <div class="portfolio-container">
-              <div class="portfolio-details">
-                <a href="#">
-                  <h2>Phasellus ultrices nulla</h2>
-                </a>
-                <a href="#">
-                  <p>
-                    Donec consectetuer ligula vulputate sem tristique cursus.
-                  </p>
-                </a>
-              </div>
-              <img
-                src="portfolio2.jpeg"
-                class="rounded mx-auto d-block"
-                alt="portfolio2"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 letra">
-            <div class="portfolio-container">
-              <div class="portfolio-details">
-                <a href="#">
-                  <h2>Phasellus ultrices nulla</h2>
-                </a>
-                <a href="#">
-                  <p>
-                    Donec consectetuer ligula vulputate sem tristique cursus.
-                  </p>
-                </a>
-              </div>
-              <img
-                src="portfolio3.jpg"
-                class="rounded mx-auto d-block"
-                alt="portfolio3"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 letra">
-            <div class="portfolio-container">
-              <div class="portfolio-details">
-                <a href="#">
-                  <h2>Phasellus ultrices nulla</h2>
-                </a>
-                <a href="#">
-                  <p>
-                    Donec consectetuer ligula vulputate sem tristique cursus.
-                  </p>
-                </a>
-              </div>
-              <img
-                src="portfolio4.jpg"
-                class="rounded mx-auto d-block"
-                alt="portfolio4"
-              />
-            </div>
+          <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+            <img src="\anorio.jpeg" class="img-fluid" alt="">
+          </div >
+          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0 text-dark">
+            <h2>Morbi in sem quis dui placerat ornare.</h2>
+            <h1> ¿Por qué invertir en ARMV?</h1>
+            <p>
+            <ul class="text-dark">    
+              <li> <ion-icon name="earth-outline"></ion-icon>  Porque la red de ARMV capta y vende más bienes raíces que cualquier otra red de bienes raíces en el mundo.</li>
+              <li><ion-icon name="ribbon-outline"></ion-icon>Porque es un sistema comprobado en más de 110 países.</li>
+              <li><ion-icon name="briefcase-outline"></ion-icon>Porque tiene una Presencia Prominente en el Mercado gracias a la publicidad colectiva de miles de agentes y oficinas alrededor del mundo.</li>
+            </ul>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+  </section>
 </template>
-
 <script>
 export default {
   name:'Portfolio'
 }
 </script>
+
