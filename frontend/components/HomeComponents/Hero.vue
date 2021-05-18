@@ -7,11 +7,7 @@
           <h2>
             Somos una empresa seria y responsable uwu
           </h2>
-          <a href="#" class="btn-quiero-alquilar scrollto">
-            QUIERO ALQUILAR<ion-icon
-              name="arrow-forward-circle-outline"
-            ></ion-icon
-          ></a>
+          <a href="#about" class="btn-quiero-alquilar scrollto">Quiero Alquilar</a>
         </div>
       
     </section>
