@@ -2,7 +2,7 @@
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title letra" data-aos="fade-up">
           <h2>Departamentos</h2>
           <p>Un hogar es el lugar donde mantenemos a nuestras familias, donde nos sentimos seguros y donde disfrutamos de total libertad </p>
         </div>
@@ -18,8 +18,8 @@
                 <h4>Departamento 1</h4>
                 <p>Un ambiente</p>
                 <div class="portfolio-links">
-                  <a href="port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="port1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Departamento 1"><i class="bx bx-plus"></i></a>
+                 <a href="portfolio-details.html" title="Ver más detalles"  > <i class="bi bi-link"></i></a> 
                 </div>
               </div>
             </div>
@@ -32,8 +32,8 @@
                 <h4>Departamento 2</h4>
                 <p>Un ambiente</p>
                 <div class="portfolio-links">
-                  <a href="port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="port2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Departamento 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="Ver más detalles"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -46,8 +46,8 @@
                 <h4>Departamento 3</h4>
                 <p>Dos ambientes</p>
                 <div class="portfolio-links">
-                  <a href="port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="port3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Departamento 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="Ver más detalles"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -60,8 +60,8 @@
                 <h4>Departamento 4</h4>
                 <p>Dos ambientes</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Departamento 4"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="Ver más detalles"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>

@@ -42,7 +42,7 @@ export default {
   background-color: rgb(20, 13, 13);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   min-height: 55px;
-  
+  font-size: 20px;
   
 }
 .nav-link {
@@ -51,5 +51,12 @@ export default {
 .nav-link:hover {
   color: #1bac91;
   font-weight: 700;
+  
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(2, 85, 78);
+  transition: 0.5s;
+  
+  
 }
 </style>

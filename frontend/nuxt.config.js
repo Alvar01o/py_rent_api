@@ -10,15 +10,24 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'StyleSheet', type: 'text/css', href: '/css/bootstrap.min.css' },
+      { rel: 'StyleSheet', type: 'text/css', href: '//unpkg.com/bootstrap/dist/css/bootstrap.min.css' },
+      { rel: 'StyleSheet', type: 'text/css', href: '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css' },
       { rel:'Stylesheet',
         href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
       }
+
+      
     ],
     script:[
       {
         src:"https://unpkg.com/ionicons@5.4.0/dist/ionicons.js",
+        src:"//unpkg.com/vue@latest/dist/vue.min.js",
+        src:"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js",
+        src:"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js",
         body: true,
+        
       }
+      
     ]
   },
 

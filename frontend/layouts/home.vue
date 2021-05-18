@@ -134,6 +134,7 @@ export default {
   margin-left: 60px;
 }
 p {
+ 
   font-size: 18px;
   color: #999999;
   line-height: 1.8;
@@ -439,6 +440,13 @@ h1 {
   padding-bottom: 40px;
   text-align: center;
 }
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+.section-bg {
+  background-color: #ffff;
+}
 
 .section-title h2 {
   font-size: 36px;
@@ -450,6 +458,7 @@ h1 {
 
 .section-title p {
   margin-bottom: 0;
+  
 }
 
 .contact .info {
@@ -511,10 +520,7 @@ h1 {
   margin-right: 10px;
 }
 
-.contact .info .social-links a:hover {
-  background: #1bac91;
-  color: #fff;
-}
+
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
   background: #1bac91;
@@ -619,5 +625,34 @@ h1 {
   }
 }
 
+.icons .info i {
+    font-size: 20px;
+    color: #1bac91;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #e1f0ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.icons .info {
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(7, 70, 66, 0.1);
+}
+.icons .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #43857a;
+}
+.icons .info .mundo:hover i, .icons .info .otro:hover i, .icons .info .otro2:hover i {
+  background: #1bac91;
+  color: #fff;
+}
 </style>
 

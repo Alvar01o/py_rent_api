@@ -1,9 +1,9 @@
 <template>
-      <section id="aboutus">
-      <div class="container letra">
+      <section id="contact" class="contact">
+      <div class="container letra ">
            <div class="section-title" data-aos="fade-up">
           <h2>Contactanos</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p >Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
                <div class="row no-gutters justify-content-center" data-aos="fade-up">
 
@@ -16,7 +16,7 @@
               </div>
 
               <div class="email mt-4">
-                <i class="bi bi-envelope"></i>
+                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>armvpropiedades@gmail.com</p>
               </div>
@@ -49,7 +49,7 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
@@ -59,7 +59,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
             </form>
           </div>
 
