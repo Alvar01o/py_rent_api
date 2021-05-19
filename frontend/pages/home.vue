@@ -3,7 +3,6 @@
     <Hero />
     <Portfolio />
     <Portfolio2 />
-  
     <AboutUs />
   </div>
 </template>
