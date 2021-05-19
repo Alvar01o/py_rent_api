@@ -14,9 +14,11 @@ export default {
       { rel: 'StyleSheet', type: 'text/css', href: '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css' },
       { rel:'Stylesheet',
         href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
+      },
+      {
+        rel: 'Stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css'
       }
-
-
     ],
     script:[
       {
