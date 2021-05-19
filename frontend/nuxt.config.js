@@ -16,18 +16,23 @@ export default {
         href:'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap'
       }
 
-      
+
     ],
     script:[
       {
         src:"https://unpkg.com/ionicons@5.4.0/dist/ionicons.js",
-        src:"//unpkg.com/vue@latest/dist/vue.min.js",
-        src:"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js",
-        src:"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js",
         body: true,
-        
-      }
-      
+      },
+      {
+        src: "//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js",
+        body: true,
+      },
+      {
+        src: "//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js",
+        body: true,
+      },
+
+
     ]
   },
 
@@ -51,12 +56,16 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
-
+  bootstrapVue: {
+    // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
+    icons: true
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
