@@ -22,9 +22,9 @@
 									data-gallery="portfolioGallery"
 									class="portfolio-lightbox"
 									title="Departamento 1"
-									><i class="bx bx-plus"></i
+									><i class="bi bi-plus"></i
 								></a>
-								<a href="portfolio-details.html" title="Ver más detalles">
+								<a href="/detalles" title="Ver más detalles">
 									<i class="bi bi-link"></i
 								></a>
 							</div>
@@ -44,7 +44,7 @@
 									data-gallery="portfolioGallery"
 									class="portfolio-lightbox"
 									title="Departamento 2"
-									><i class="bx bx-plus"></i
+									><i class="bi bi-plus"></i
 								></a>
 								<a href="portfolio-details.html" title="Ver más detalles"
 									><i class="bi bi-link"></i
@@ -66,7 +66,7 @@
 									data-gallery="portfolioGallery"
 									class="portfolio-lightbox"
 									title="Departamento 3"
-									><i class="bx bx-plus"></i
+									><i class="bi bi-plus"></i
 								></a>
 								<a href="portfolio-details.html" title="Ver más detalles"
 									><i class="bi bi-link"></i
@@ -88,7 +88,7 @@
 									data-gallery="portfolioGallery"
 									class="portfolio-lightbox"
 									title="Departamento 4"
-									><i class="bx bx-plus"></i
+									><i class="bi bi-plus"></i
 								></a>
 								<a href="portfolio-details.html" title="Ver más detalles"
 									><i class="bi bi-link"></i
@@ -114,10 +114,10 @@
 									data-gallery="portfolioGallery"
 									class="portfolio-lightbox"
 									title="Web 2"
-									><i class="bx bx-plus"></i
+									><i class="bi bi-plus"></i
 								></a>
 								<a href="portfolio-details.html" title="More Details"
-									><i class="bx bx-link"></i
+									><i class="bi bi-link"></i
 								></a>
 							</div>
 						</div>

@@ -87,7 +87,7 @@ export default {
  }
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(19, 18, 18, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
