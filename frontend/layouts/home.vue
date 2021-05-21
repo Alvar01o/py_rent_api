@@ -654,5 +654,64 @@ section {
   background: #1bac91;
   color: #fff;
 }
+.detalles {
+  padding: 20px 0;
+  background-color: #f7f7f7;
+  min-height: 40px;
+  margin-top: 72px;
+}
+
+@media (max-width: 992px) {
+  .detalles {
+    margin-top: 60px;
+  }
+}
+
+.detalles h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .detalles h2 {
+    margin: 0 0 10px 0;
+  }
+}
+/*portfoliodetalles*/
+.portfolio-details {
+  padding-top: 40px;
+}
+
+
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(33, 65, 60, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+
 </style>
 

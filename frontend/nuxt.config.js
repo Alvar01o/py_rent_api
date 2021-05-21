@@ -18,22 +18,32 @@ export default {
       {
         rel: 'Stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css'
-      }
+      },
+      {
+        rel: 'Stylesheet',
+        href: 'https://unpkg.com/swiper/swiper-bundle.min.css'
+      },
+      
+
     ],
     script:[
       {
         src:"https://unpkg.com/ionicons@5.4.0/dist/ionicons.js",
         body: true,
       },
+//      {
+//        src: "https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js",
+//        body: true,
+//      },
+//      {
+//        src: "https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js",
+//        body: true,
+//      },
       {
-        src: "//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js",
-        body: true,
-      },
-      {
-        src: "//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js",
-        body: true,
-      },
+        src:"https://unpkg.com/swiper/swiper-bundle.min.js",
+        body:true,
 
+      },
 
     ]
   },
