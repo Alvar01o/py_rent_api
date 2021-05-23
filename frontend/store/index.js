@@ -2,19 +2,15 @@ export const state = () => ({
 	theme: {
 		NavMenuItems: [
 			{
-				text: "Home",
+				text: "Inicio",
 				url: "#",
 			},
 			{
-				text: "Profile",
+				text: "Sobre Nosotros",
 				url: "#",
 			},
 			{
-				text: "Blog",
-				url: "#",
-			},
-			{
-				text: "Reviews",
+				text: "Contactanos",
 				url: "#",
 			},
 		],
@@ -38,6 +34,9 @@ export const state = () => ({
 export const mutations = {};
 
 export const getters = {
+	getNavMenuItems: (state) => {
+		return state.theme.NavMenuItems;
+	},
 	getCards: (state) => {
 		return state.data.cards;
 	},
