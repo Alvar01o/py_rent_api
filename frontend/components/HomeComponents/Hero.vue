@@ -11,7 +11,7 @@
 				Bienvenido a ARMV propiedades
 			</h1>
 			<h2>
-				Somos una empresa seria y responsable uwu
+				Dejanos cumplir tu sueño
 			</h2>
 			<a href="#about" class="btn-quiero-alquilar scrollto">Quiero Alquilar</a>
 		</div>

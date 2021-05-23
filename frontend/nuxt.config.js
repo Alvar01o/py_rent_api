@@ -85,7 +85,7 @@ export default {
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
 	axios: {
 		baseURL: "http://api.py-rent.loc",
-		proxy: TRUE,
+		proxy: true,
 		//		proxy: {
 		//			"/api/": {
 		//				target: "http://api.py-rent.loc",
