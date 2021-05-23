@@ -11,7 +11,7 @@
 				>
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item" v-for="(item, index) in items" :key="index">
-							<a class="nav-link" href="#" id="home">{{ item.text }}</a>
+							<a class="nav-link" :href="item.url" id="home">{{ item.text }}</a>
 						</li>
 					</ul>
 				</div>

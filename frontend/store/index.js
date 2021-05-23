@@ -13,6 +13,10 @@ export const state = () => ({
 				text: "Contactanos",
 				url: "#",
 			},
+			{
+				text: "Login",
+				url: "/login",
+			},
 		],
 		footer: {
 			companyName: "DevPortfolios",
